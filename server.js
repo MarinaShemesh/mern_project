@@ -92,5 +92,5 @@ router.route('/comments/:comment_id')
 //Use our router configuration when we call /api
 app.use('/api', router);
 //starts the server and listens for requests
-app.listen(process.env.PORT || '30001');
+app.listen(process.env.PORT || 30001);
  console.log('api running on port 3001');
