@@ -11,8 +11,11 @@ var router = express.Router();
 //it up, or 3001
 var port = process.env.API_PORT || 3001;
 
+mongoose.connect(process.env.CONNECTION_STRING||'
+mongodb://MarinaS:shalom@ds153400.mlab.com:53400/marinashemeshdatabase
+');
+// mongoose.connect('mongodb://localhost/mern');
 
-mongoose.connect('mongodb://localhost/mern');
 
 //now we should configure the API to use bodyParser and look for 
 //JSON data in the request body
@@ -91,6 +94,5 @@ router.route('/comments/:comment_id')
 //Use our router configuration when we call /api
 app.use('/api', router);
 //starts the server and listens for requests
-app.listen(3001, function() {
+app.listen(process.env.PORT || '30001');
  console.log('api running on port 3001');
-});
