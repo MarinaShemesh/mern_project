@@ -11,9 +11,7 @@ var router = express.Router();
 //it up, or 3001
 var port = process.env.API_PORT || 3001;
 
-mongoose.connect(process.env.CONNECTION_STRING||'
-mongodb://MarinaS:shalom@ds153400.mlab.com:53400/marinashemeshdatabase
-');
+mongoose.connect(process.env.CONNECTION_STRING||'mongodb://localhost/mern');
 // mongoose.connect('mongodb://localhost/mern');
 
 
